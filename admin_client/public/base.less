@@ -1,0 +1,76 @@
+/* 这是主页内容区 抽离出的公共基础样式 */
+.container {
+    position: absolute;
+    width: 83%;
+    height: 89%;
+    background-color: #fff;
+    top: 83px;
+    left: 230px;
+
+    /* 主体后台的主体的标题栏 */
+    .breadCrumb {
+        height: 30px;
+        width: 100%;
+        line-height: 30px;
+        background-color: #fff;
+        padding-left: 45px;
+        padding-top: 5px;
+        color: #303133;
+        box-sizing: border-box;
+
+        span {
+            margin-left: 10px;
+        }
+
+    }
+
+    .el-divider--horizontal {
+        margin: 12px 0;
+        margin-bottom: 6px;
+    }
+
+    /* 主页后台主体的标题栏左侧的小三角的遮罩层 */
+    .mask {
+        width: 0;
+        height: 0;
+        border-top: 14px solid #ebebeb;
+        border-left: 14px solid #ebebeb;
+        border-right: 14px solid transparent;
+        border-bottom: 14px solid transparent;
+        position: absolute;
+        left: -3px;
+        top: -3px;
+        z-index: 2000;
+    }
+
+    /* 主页后台主体的标题栏左侧的小三角 */
+    .element {
+        width: 0;
+        height: 0;
+        border-top: 14px solid #ebebeb;
+        border-left: 14px solid #ebebeb;
+        border-right: 14px solid white;
+        border-bottom: 14px solid white;
+        position: absolute;
+        left: 0;
+        top: 0;
+        box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4);
+        z-index: 1000;
+    }
+
+    /* 这是没有数据的时候显示的样式背景图  */
+    /deep/ .el-table__empty-block {
+        width: 300px;
+        height: 585px;
+        background: url('../src/assets/noData.png') no-repeat center 10px;
+        padding-top: 118px;
+        box-sizing: border-box;
+    }
+
+    /deep/ .el-table__body-wrapper {
+        table {
+            /*  表格的高度和外容器的高度保持一致  */
+            height: 390px;
+        }
+    }
+}
